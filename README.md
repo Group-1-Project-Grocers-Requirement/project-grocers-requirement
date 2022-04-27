@@ -8,3 +8,10 @@ reading the Whole Project Xd through, taking notes and create front-end and back
 
 Day 2 Tuesday :
 Shubham : Create database for project and for some problems regarding project finding solution on google 
+Bhalchandra : backend
+Azad : backend
+
+Day : 3
+Shubham : Backend and doing server.js
+Bhalchandra : Backend and doing server.js
+Azad : Backend and doing server.js
