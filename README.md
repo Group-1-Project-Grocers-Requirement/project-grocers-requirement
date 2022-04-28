@@ -5,4 +5,13 @@ reading the Whole Project Xd through, taking notes and create front-end and back
 1. Read Project requirement 
 2. creating and installing required files modules etc 
 3. Individual skills and distribute the work 
-4. Now we are working with backend (node , express, mongodb) .
+4. Now we are working with backend (node , express, mongodb) 
+Day 2 Tuesday :
+Shubham : Create database for project and for some problems regarding project finding solution on google 
+Bhalchandra : backend
+Azad : backend
+Day : 3
+Shubham : Backend and doing server.js
+Bhalchandra : Backend and doing server.js
+Azad : Backend and doing server.js
+
