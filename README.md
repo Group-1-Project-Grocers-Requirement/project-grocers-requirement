@@ -5,3 +5,4 @@ reading the Whole Project Xd through, taking notes and create front-end and back
 1. Read Project requirement 
 2. creating and installing required files modules etc 
 3. Individual skills and distribute the work 
+4. Now we are working with backend (node , express, mongodb) .
