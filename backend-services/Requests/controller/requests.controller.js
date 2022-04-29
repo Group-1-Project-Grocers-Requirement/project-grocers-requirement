@@ -17,7 +17,6 @@ let saveRequest = (req, res) => {
     empID: req.body.empId,
     reqMsg: req.body.msg,
   });
-
   request.save({}, (err, result) => {
     if (!err) {
       res.send('Record stored successfully ');

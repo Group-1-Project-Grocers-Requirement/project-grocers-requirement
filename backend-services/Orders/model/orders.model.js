@@ -13,5 +13,4 @@ let OrderSchema = mongoose.Schema({
 });
 
 let OrderModel = mongoose.model("Order",OrderSchema,"itemsPurchased");
-
 module.exports = OrderModel;

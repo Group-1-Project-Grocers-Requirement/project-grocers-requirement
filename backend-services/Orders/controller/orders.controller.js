@@ -26,7 +26,7 @@ let updateStatus = (req, res) => {
             (err, result) => {
               if (!err) {
                 if (result.nModified > 0) {
-                  res.send('Record updated succesfully');
+                  res.send('Modified succesfully');
                 } else {
                   res.send('Record is not available');
                 }
