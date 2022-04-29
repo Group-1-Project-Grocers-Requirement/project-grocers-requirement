@@ -18,4 +18,9 @@ Day : 4
 Shubham : Backend and doing server.js
 Bhalchandra : Backend and doing server.js
 Azad : Backend and doing server.js
+Day : 5
+Shubham : working with frontend
+Balchandra : Working with frontend 
+Azad : Working with frontend 
+
 
