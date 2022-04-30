@@ -10,7 +10,7 @@ reading the Whole Project Xd through, taking notes and create front-end and back
 1. Shubham : Create database for project and for some problems regarding project finding solution on google 
 Bhalchandra : backend
 Azad : backend
-# Day 3 Tuesday :
+# Day 3:
 1. Shubham : Create database for project and for some problems regarding project finding solution on google 
 Bhalchandra : backend
 Azad : backend
