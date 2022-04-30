@@ -49,4 +49,4 @@ app.use('/sales', Sales);
 
 
 
-app.listen(8080, () => console.log('server is runnig on port no.8080'));
+app.listen(9090, () => console.log('server is runnig on port no.9090'));
