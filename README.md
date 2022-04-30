@@ -22,5 +22,9 @@ Azad : Backend and doing server.js
 1. Shubham : working with frontend
 Balchandra : Working with frontend 
 Azad : Working with frontend 
+# day 6:
+1. shubham : admin , employee , user sign-in and services with models 
+2. Azad Frontend admin-index, and employee-index 
+3. bhalchandra Frontend and backend
 
 
