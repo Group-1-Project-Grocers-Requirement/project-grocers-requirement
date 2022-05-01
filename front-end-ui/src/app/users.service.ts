@@ -19,6 +19,7 @@ export class UsersService {
   getUserDetails(email: any): Observable<User[]> {
     return this.http.get<User[]>(
       'http://localhost:9090/getUserDetails/' + email
+      
     );
   }
 
@@ -40,7 +41,6 @@ export class UsersService {
       })
       .subscribe(
         (result) => {
-          /*console.log(result)*/
         },
         (error) => console.log(error)
       );
@@ -52,7 +52,6 @@ export class UsersService {
       })
       .subscribe(
         (result) => {
-          /*console.log(result)*/
         },
         (error) => console.log(error)
       );
@@ -64,7 +63,6 @@ export class UsersService {
       })
       .subscribe(
         (result) => {
-          /*console.log(result)*/
         },
         (error) => console.log(error)
       );
@@ -76,7 +74,6 @@ export class UsersService {
       })
       .subscribe(
         (result) => {
-          /*console.log(result)*/
         },
         (error) => console.log(error)
       );
@@ -88,7 +85,6 @@ export class UsersService {
       })
       .subscribe(
         (result) => {
-          /*console.log(result)*/
         },
         (error) => console.log(error)
       );
@@ -101,7 +97,6 @@ export class UsersService {
       })
       .subscribe(
         (result) => {
-          /*console.log(result)*/
         },
         (error) => console.log(error)
       );
@@ -113,7 +108,6 @@ export class UsersService {
       .post('http://localhost:9090/ticket', data, { responseType: 'text' })
       .subscribe(
         (result) => {
-          /*console.log(result)*/
         },
         (error) => console.log(error)
       );
@@ -125,7 +119,7 @@ export class UsersService {
         responseType: 'text',
       })
       .subscribe(
-        (result) => console.log(result),
+        (result) => alert(result),
         (error) => console.log(error)
       );
   }
@@ -138,12 +132,10 @@ export class UsersService {
   }
 
   AddtoCart(product: any): void {
-    // tslint:disable-next-line:max-line-length
     this.http
       .post('http://localhost:9090/select', product, { responseType: 'text' })
       .subscribe(
         (result) => {
-          /*console.log(result)*/
         },
         (error) => console.log(error)
       );
@@ -156,7 +148,6 @@ export class UsersService {
       .put('http://localhost:9090/cart', cartRef, { responseType: 'text' })
       .subscribe(
         (result) => {
-          /*console.log(result)*/
         },
         (error) => console.log(error)
       );
@@ -166,7 +157,6 @@ export class UsersService {
       .delete('http://localhost:9090/cart/' + cartRef, { responseType: 'text' })
       .subscribe(
         (result) => {
-          /*console.log(result)*/
         },
         (error) => console.log(error)
       );
@@ -176,7 +166,6 @@ export class UsersService {
       .post('http://localhost:9090/cart', list, { responseType: 'text' })
       .subscribe(
         (result) => {
-          /*console.log(result)*/
         },
         (error) => console.log(error)
       );
@@ -221,7 +210,6 @@ export class UsersService {
       })
       .subscribe(
         (result) => {
-          /*console.log(result)*/
         },
         (error) => console.log(error)
       );
@@ -233,7 +221,6 @@ export class UsersService {
       })
       .subscribe(
         (result) => {
-          /*console.log(result)*/
         },
         (error) => console.log(error)
       );

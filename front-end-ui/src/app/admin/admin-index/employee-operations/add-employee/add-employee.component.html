@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <b class="navbar-brand">Add Employee</b>
+      <div id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <button class="nav-link btn btn-link" (click)="back()">Back</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+<div class="container" style="background-color: white;width: 100%;">
+    <div class="row">
+      <div class="col">
+        <h4>Add Employee</h4>
+        <form #formRef = 'ngForm' (ngSubmit) = 'addEmp(formRef.value)' ngNativeValidate>
+            <div class="row mb-3">
+                <label class="col-sm-3 col-form-label">Employee's First Name</label>
+                <div class="col-sm-7">
+                <input type="text" class="form-control" name="fname" required ngModel/>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col-sm-3 col-form-label">Employee's Last Name</label>
+                <div class="col-sm-7">
+                <input type="text" class="form-control" name="lname" required ngModel/>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label class="col-sm-3 col-form-label">Employee's Email</label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" name="email" required ngModel/>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-secondary m-2"  onClick="window.location.reload();" >Add Employee</button>
+            <button type="reset" class="btn btn-light">Reset</button>
+        </form>
+        <div class="alert alert-success" *ngIf="resultMsg">{{resultMsg}}</div>
+        <br>
+      </div>
+    </div>
+    <table class="table table-stripped text-center" style="width: 85%;">
+      <thead>
+        <tr>
+          <th>EmpID</th>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Email</th>
+          <th>Password</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let data of data">
+        <tr>
+          <td>{{data._id}}</td>
+          <td>{{data.fname}}</td>
+          <td>{{data.lname}}</td>
+          <td>{{data.email}}</td>
+          <td>{{data.pass}}</td>
+        </tr>
+      </tbody>
+    </table>
+    
+</div>

@@ -19,13 +19,8 @@ export class EmployeeSignInComponent implements OnInit {
   employeeLogin(empRef: any): void {
     const id = empRef.empID;
     const pass = empRef.empPass;
-    // if (pass == "Welcome123"){
-    //   alert("Change Password From Default");
-    //   this.displayChangePass();
-    // }
-    
     this.empSer.getEmployeeByID(id).subscribe(result => {
-      if (result[0]._id === id && result[0].pass === "Welcome123") {
+      if (result[0]._id === id && pass === "emp123") {
         alert("Change Password From Default");
         this.displayChangePass();
       } 
@@ -38,12 +33,10 @@ export class EmployeeSignInComponent implements OnInit {
         this.msg = 'Employee Not Found, try again';
       }
     });
-    
   }
   displayChangePass(){
     this.showChangePass = !this.showChangePass;
   }
-
   changeEmployeePassword(empRef : any){
     let id = empRef.id;
     this.empSer.changeEmployeePassword(empRef,id);

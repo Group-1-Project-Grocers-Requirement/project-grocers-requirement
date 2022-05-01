@@ -1,0 +1,33 @@
+h1{
+    text-align: center;
+    color:darkgreen;
+    margin-top: 8px;
+    padding: 3px;
+}
+nav{
+    background-color: #FEE140;
+    background-image: linear-gradient(90deg, #FEE140 0%, #FA709A 100%);
+}
+a{
+    color: white;
+}
+.dropdown-item {
+    color: black;
+}
+.dropdown {
+    margin: 5px;
+}
+#dropdownMenuButton {
+    background-color: #85FFBD;
+    background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+    
+}
+#table, table{
+    width:min-content;
+}
+d{
+    float: left;
+}
+nav-link:hover{
+    color: #85FFBD;
+}

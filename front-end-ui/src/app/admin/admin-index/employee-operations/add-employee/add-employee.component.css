@@ -1,0 +1,13 @@
+
+.col {
+    margin: auto;
+}
+nav{
+    background-color: #FEE140;
+    background-image: linear-gradient(90deg, #FEE140 0%, #FA709A 100%);
+}
+table{
+    margin-left: 50px;
+    width: fit-content;
+}
+

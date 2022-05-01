@@ -1,5 +1,4 @@
 const SalesModel = require('../model/sales.model.js');
-const ObjectId = require('mongodb').ObjectId;
 
 //add
 let storeSaleDetails = (req,res)=>{
@@ -14,6 +13,7 @@ let storeSaleDetails = (req,res)=>{
     console.log(sale)
     sale.save((err,result)=>{
         if(!err){
+            console.log(result.datePurchased)
             res.send("Sale stored successfully")
         } else {
             res.send("Sale didn't store...")
@@ -24,7 +24,6 @@ let storeSaleDetails = (req,res)=>{
 let getUserPurchaseDetails = (req,res)=>{
     let uid = req.params.uid;
     SalesModel.find({ uid: uid },(err,result)=>{
-    // SalesModel.find({ uid: new ObjectId(uid) },(err,result)=>{
         if(!err){
             res.json(result);
         }
@@ -34,8 +33,8 @@ let getUserPurchaseDetails = (req,res)=>{
 let getProductPurchaseDetails = (req,res)=>{
     let product = req.params.pid;
     SalesModel.find({ name:product },(err,result)=>{
-    // SalesModel.find({ name: new ObjectId(product) },(err,result)=>{
         if(!err){
+            console.log(result)
             res.json(result);
         }
     });
@@ -45,6 +44,7 @@ let datePurchased = (req,res)=>{
 
     SalesModel.find({ datePurchased: date},(err,result)=>{
         if(!err){
+            console.log(result)
             res.json(result);
         }
     });
@@ -55,6 +55,7 @@ let twoDatesPurchaseed = (req,res)=>{
     console.log(date, date2)
     SalesModel.find({ datePurchased: {$gte:date, $lte:date2}}, (err,result) => {
         if(!err){
+            console.log(result)
             res.json(result);
         }
     });

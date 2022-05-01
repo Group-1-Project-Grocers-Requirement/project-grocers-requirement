@@ -1,8 +1,17 @@
-body {
+  body {
     font-family: "Poppins", sans-serif;
     height: 100vh;
   }
+  h1{
 
+    background-image: linear-gradient(to right, #FF8008 0%, #FFC837  51%, #FF8008  100%);
+    box-shadow:  -20px -20px 60px #bdbbc7,20px 20px 60px #a2a2b1;
+    padding: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
   h3 {
     margin: 20px;
   }
@@ -10,17 +19,20 @@ body {
   a{
     float: left;
   }
-  /* STRUCTURE */
   
   .wrapper {
     display: flex;
     align-items: center;
     flex-direction: column; 
-    justify-content: center;
-    width: 100%;
-    min-height: 100%;
     padding: 20px;
-    margin-top: 50px;
+    padding: 40px;
+    box-sizing: border-box;
+    background-image: linear-gradient( 135deg, #CE9FFC 10%, #7367F0 100%);
+    box-shadow: 5px 5px 5px #cbced1, -5px -5px 5px rgb(197, 194, 194);
+    width: 600px;
+    height: 500px;
+    margin-left: 30%;
+    border-radius: 50px;
   }
   
   #formContent {
@@ -95,3 +107,23 @@ body {
   input[type=text]:placeholder, input[type=password]:placeholder{
     color: #cccccc;
   }
+  .btn-grad {background-image: linear-gradient(to right, #2BC0E4 0%, #EAECC6  51%, #2BC0E4  100%)}
+  .btn-grad {
+     margin: 10px;
+     padding: 15px 45px;
+     text-align: center;
+     text-transform: uppercase;
+     transition: 0.5s;
+     background-size: 200% auto;
+     color: white;            
+     box-shadow: 0 0 20px #eee;
+     border-radius: 10px;
+     display: block;
+   }
+
+   .btn-grad:hover {
+     background-position: right center; /* change the direction of the change here */
+     color: #fff;
+     text-decoration: none;
+   }
+  
