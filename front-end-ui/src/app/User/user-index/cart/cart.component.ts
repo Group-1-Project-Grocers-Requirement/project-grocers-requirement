@@ -19,7 +19,6 @@ export class CartComponent implements OnInit {
     this.router.navigate(['shopper']);
   }
   complete(): void {
-    this.router.navigate(['user-index/order-status']);
+    this.router.navigate(['user-index']);
   }
-
 }

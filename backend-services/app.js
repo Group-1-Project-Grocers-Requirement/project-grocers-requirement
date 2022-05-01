@@ -5,7 +5,7 @@ let bodyParser = require('body-parser');
 let mongoose = require('mongoose');
 let cors = require('cors');
 
-let url = 'mongodb://localhost:27017/project';
+let url = 'mongodb://localhost:27017/final';
 
 app.use(bodyParser.urlencoded({ extended: true })); // enable body part data
 app.use(bodyParser.json()); // json data.
