@@ -22,7 +22,7 @@ let storeUserDetails = (req, res) => {
   let uid;
   product.save((err, result) => {
     if (!err) {
-      res.send('Records stored successfully');
+      res.send('Records stored successfully Your ID : '+result._id);
     } else {
       res.send("Record didn't store...");
     }
@@ -130,7 +130,6 @@ let addtoCart = (req, res) => {
     userId: req.body.userId,
     imgId: req.body.imgId,
   });
-
   CartModel.findOne(
     { pid: req.body._id, userId: req.body.userId },
     (err3, result2) => {

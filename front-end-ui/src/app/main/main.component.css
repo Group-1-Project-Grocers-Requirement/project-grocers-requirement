@@ -1,0 +1,71 @@
+ body {
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+  }
+
+  h3 {
+      margin: 30px;
+  }
+  h1 {
+    text-align: center;
+    color: rgb(0, 68, 0);
+  }
+  
+  /* STRUCTURE */
+  
+  .wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+    margin-top: 50px;
+  }
+  h1{
+ 
+      border-radius:  50px;
+      background-image: linear-gradient(to right, #FF8008 0%, #FFC837  51%, #FF8008  100%);
+      box-shadow:  -20px -20px 60px #bdbbc7,20px 20px 60px #a2a2b1;
+      width: fit-content;
+      padding: 30px;
+      color: white;
+  }
+  #formContent {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background: rgb(40, 64, 139);
+    padding: 30px;
+    width: 90%;
+    max-width: 700px;
+    height: 400px;
+    position: relative;
+    padding: 0px;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(115, 95, 136, 0.3);
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    text-align: center;
+    margin-top: 30px;
+  }
+   
+  .btn-grad {background-image: linear-gradient(to right, #003973 0%, #E5E5BE  51%, #003973  100%)}
+  .btn-grad {
+     margin: 10px;
+     padding: 15px 45px;
+     text-align: center;
+     text-transform: uppercase;
+     transition: 0.5s;
+     background-size: 200% auto;
+     color: white;            
+     box-shadow: 0 0 20px #eee;
+     border-radius: 10px;
+     display: block;
+     width: 400px;
+   }
+
+   .btn-grad:hover {
+     background-position: right center; /* change the direction of the change here */
+     color: #fff;
+     text-decoration: none;
+   }
+  

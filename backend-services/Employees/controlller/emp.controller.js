@@ -1,6 +1,14 @@
 let EmployeeModel = require('../model/employee.model.js');
 const ObjectId = require('mongodb').ObjectId;
 
+let getEmp = (req, res) => {
+  EmployeeModel.find({}, (err, result) => {
+    if (!err) {
+      res.json(result);
+    }
+  });
+};
+
 let getEmpByID = (req, res) => {
   let pid = req.params.pid;
   EmployeeModel.find({ _id:pid}, (err, result) => {
@@ -22,7 +30,7 @@ let empUserDetails = (req, res) => {
   emp.save((err, result) => {
     if (!err) {
    
-      res.send('Records stored successfully');
+      res.send('Records stored successfully "EMP ID ": '+result._id+" 'Password' : "+result.pass);
     } else {
       res.send("Record didn't store...");
     }
@@ -51,7 +59,7 @@ let editEmpPro = (req, res) => {
   let blastname = req.body.lastname.trim();
   let bpassword = req.body.password.trim();
   EmployeeModel.updateOne(
-    { _id: new ObjectId(eid) },
+    { _id: eid },
     {
       $set: {
         fname: bfirstname,
@@ -82,4 +90,4 @@ let changeEmpPassword = (req,res) =>{
     }
   });
 }
-module.exports = { empUserDetails, deleteEmpById, editEmpPro, getEmpByID,changeEmpPassword };
+module.exports = { empUserDetails, deleteEmpById, editEmpPro, getEmpByID,changeEmpPassword,getEmp};

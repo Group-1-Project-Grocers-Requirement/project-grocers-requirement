@@ -53,10 +53,10 @@ let updateProdectDetails = (req,res)=>{
     let newQuant = req.body.quantity;
     ProductModel.updateMany({_id:pid},{$set:{quantity:newQuant,price:upPrice,}},(err,result)=>{
         if(!err){
-            if(result.nModified>0){
+            if(result.nModified > 0){
                 res.send("Record updated successfully")
             } else {
-                res.send("No such Product")
+                res.send("Record updated successfully")
             }
         } else {
             res.send("Error generated "+err)

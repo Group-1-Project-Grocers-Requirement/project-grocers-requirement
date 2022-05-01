@@ -1,0 +1,76 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <b class="navbar-brand" style="margin-left: 2em;">User ID: {{retrieve}}</b>
+    </div>
+    <div id="navbarNav" class="navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+            </li>
+            <li><a routerLink="/user-index/order-status" class="nav-link"> Order Status</a></li>
+            <li><a routerLink="/user-index/edit-profile" class="nav-link"> Edit Profile</a></li>
+            <li><a routerLink="/user-index/select-item" class="nav-link"> Pick Items</a></li>
+            <li>
+                <a routerLink=".." class="nav-link">Back</a>
+            </li>
+        </ul>
+    </div>
+</nav> 
+<div class = "container" style="background-color: white; padding: 50px;">
+    <h1>Update User Info</h1>
+    <div class = "wrapper">
+    <div id = "formContent">
+    <div class = "row">
+    <div class = "row mb-3">
+    <form #userERef = "ngForm" (ngSubmit) = "updateEmail(userERef.value)">
+        <label class = "col col-form-label">New Email</label>
+        <div class = "col">
+        <input type = "text" name = "newEmail" placeholder="enter here" class = "form-control" ngModel><br/>
+        <input type = "submit" value = "Update" class = "btn btn-dark"><span>&nbsp;</span>
+        <input type = "reset" value = "Clear" class = "btn btn-secondary">
+        </div>
+    </form>
+    </div>
+    <div class = "row mb-3">
+    <form #userPassRef = "ngForm" (ngSubmit) = "updatePass(userPassRef.value)">
+        <label class = "col col-form-label">New Password</label>
+        <div class = "col">
+        <input type = "password" name = "newPass"placeholder="enter here"  class = "form-control" ngModel><br/>
+        <input type = "submit" value = "Update" class = "btn btn-dark"><span>&nbsp;</span>
+        <input type = "reset" value = "Clear" class = "btn btn-secondary">
+        </div>
+    </form>
+    </div>
+    <div class = "row">
+    <form #userARef = "ngForm" (ngSubmit) = "updateAddress(userARef.value)">
+        <label class = "col col-form-label">New Address</label>
+        <div class = "col">
+        <input type = "text" name = "newAdd" placeholder="enter here" class = "form-control"  ngModel><br/>
+        <input type = "submit" value = "Update" class = "btn btn-dark"><span>&nbsp;</span>
+        <input type = "reset" value = "Clear" class = "btn btn-secondary">
+        </div>
+    </form>
+    </div>
+    </div>
+    <div class = "row">
+    <div class = "row">
+    <form #userPRef = "ngForm" (ngSubmit) = "updatePhone(userPRef.value)">
+        <label  class = "col col-form-label">New Phone Number</label>
+        <div class = "col">
+        <input type = "number" name = "newPhone"placeholder="enter here"  class = "form-control" ngModel><br/>
+        <input type = "submit" value = "Update" class = "btn btn-dark"><span>&nbsp;</span>
+        <input type = "reset" value = "Clear" class = "btn btn-secondary">
+        </div>
+    </form>
+    </div>
+    <div class = "row">
+    <form #userdobRef = "ngForm" (ngSubmit) = "updateDOB(userdobRef.value)">
+        <label  class = "col col-form-label">New Date of Birth</label>
+        <div class = "col">
+        <input type = "date" name = "newDOB" placeholder="enter here" class = "form-control" ngModel><br/>
+        <input type = "submit" value = "Update" class = "btn btn-dark"><span>&nbsp;</span>
+        <input type = "reset" value = "Clear" class = "btn btn-secondary">
+        </div>
+    </form>
+    </div>
+</div> 
+<div class="alert alert-success" *ngIf="success"><br>{{success}}</div>

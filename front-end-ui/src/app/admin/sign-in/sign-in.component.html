@@ -1,13 +1,17 @@
+<h1>Welcome to Grocery Takeaway Admin Sign-in</h1>
 <div class="wrapper fadeInDown">
     <div id="formContent">
                 <h3>Admin Sign In</h3>
+                <div class="alert alert-warning" style="width: fit-content; margin-left: 5%; height: fit-content;" *ngIf="msg">
+                    {{msg}}
+                </div>
         <form #loginRef="ngForm" (ngSubmit)="checkUser(loginRef.value)">
             <input type="text" name="username" placeholder="username" ngModel>
             <input type="password" name="pass" placeholder="password" ngModel>
-            <input type="submit" value="Sign In">
+            <input type="submit" value="Sign In" class="btn-grad">
         </form>
         <a routerLink="" class="nav-link">Back</a><br>
-        {{msg}}
+        
     </div>
 </div>
 

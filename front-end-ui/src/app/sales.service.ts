@@ -24,7 +24,8 @@ export class SalesService {
     return this.http.get<Sale[]> ('http://localhost:9090/sales/getProductPurchasedDetails/' + product);
   }
   getDatepurchased(date: any): Observable<Sale[]> {
-    return this.http.get<Sale[]> ('http://localhost:9090/sales/getDatePurchasedDetails/' + date);
+    //alert(typeof(date))
+    return this.http.get<Sale[]> (`http://localhost:9090/sales/getDatePurchasedDetails/${date}`);
   }
   getDatesPurchased(date: any, date2: any): Observable<Sale[]> {
     return this.http.get<Sale[]> ('http://localhost:9090/sales/twoDatesPurchased/' + date + '/' + date2);

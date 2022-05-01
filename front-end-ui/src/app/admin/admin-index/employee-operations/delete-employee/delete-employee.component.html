@@ -1,0 +1,56 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <b class="navbar-brand">Delete Employee</b>
+      <div id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <button class="nav-link btn btn-link" (click)="back()">Back</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+<br>
+<div class="container" style="background-color: white; padding: 30px; border-radius: 50px;">
+    <div class="row mb-3">
+      <div class="col mb-3">
+        <h4>Delete Employee</h4>
+        <form #empRef='ngForm' (ngSubmit)='deleteEmp(empRef.value)' ngNativeValidate>
+            <div class="row mb-3">
+                <label class="col-sm-2 col-form-label">Employee Id</label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" name="id" placeholder="Emp ID enter here" required ngModel />
+                </div>
+            </div>
+            <button type="submit" class="btn btn-danger m-2"  onClick="window.location.reload();">Delete Employee</button>
+        </form>
+        <table class="table table-stripped">
+          <thead>
+            <tr>
+              <th>EmpID</th>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Email</th>
+              <th>Password</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let data of data">
+            <tr>
+              <td>{{data._id}}</td>
+              <td>{{data.fname}}</td>
+              <td>{{data.lname}}</td>
+              <td>{{data.email}}</td>
+              <td>{{data.pass}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- { "_id" : 1, "fname" : "asd", "lname" : "asd", "email" : "abc@gmail.com", "pass" : "li123", "__v" : 0 } -->
+        <!-- <div>
+          {{data|json}}
+        </div> -->
+        <div class="alert alert-success" *ngIf="deleteMsg">{{deleteMsg}}</div>
+        <br>
+      </div>
+    </div>
+</div>

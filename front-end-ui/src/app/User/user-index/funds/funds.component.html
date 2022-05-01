@@ -1,0 +1,12 @@
+<div style="color: white;">
+<h2>Current Funds</h2>
+<div class="alert alert-warning" style="font-size: large;">
+${{currentFunds}}
+</div>
+<h2>Add Funds</h2>
+<form #userRef = "ngForm" (ngSubmit) = "addFunds(userRef.value)">
+    <label>Enter Amount</label>
+    <input type = "number" name = "addedFunds" class = "form-control" placeholder="Enter the Amount here" ngModel><br/>
+    <button type = "submit" class = "btn btn-success">Add</button>
+</form>
+</div>

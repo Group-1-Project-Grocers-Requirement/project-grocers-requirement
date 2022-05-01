@@ -1,0 +1,54 @@
+<div>
+  <!-- NavBar -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+          <div class="container-fluid">
+              <b class="navbar-brand">User ID: {{UserId}}</b>
+          </div>
+          <div  class="navbar-collapse">
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                  </li>
+                  <li><a routerLink="../order-status" class="nav-link"> Order Status</a></li>
+                          <li><a routerLink="../edit-profile" class="nav-link"> Edit Profile</a></li>
+                          <li><a routerLink="../" class="nav-link">User funds</a></li>
+                  <li class="nav-item">
+                      <a routerLink="" class="nav-link" (click) = "logout()">Log Out</a>
+                  </li>
+              </ul>
+          </div>
+      </nav> 
+      <br>
+      <!-- #navBar -->
+      <!-- page content -->
+      <div class="container main">
+          <div class="row">
+              <div class="col" style="border: none; margin: 10px; border-radius: 30px; padding: 30px; background-color: white;">
+                  <div class = "container-fluid">
+                      <h1 style="text-align: center;">User Select Item</h1>
+                      <div>
+                      <button routerLink='../view-item' class="btn btn-warning btn-lg" type="button" name="user">Go To Cart: {{cartNum}}</button>
+                    <hr>
+                    <th class="card" style="width: 18rem;float: left;" *ngFor="let item of products; let i=index;">
+                      <img class="card-img-top" src="https://media.istockphoto.com/photos/shopping-basket-with-variety-of-grocery-products-isolated-on-white-picture-id179223663?k=20&m=179223663&s=612x612&w=0&h=3zdbYKHGxg0JjFM_ZdNxTif0FE57yXNO1RRqMR-MLqg=" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">{{products[i].name}}</h5>
+                        <p class="card-text">price: ${{products[i].price}}</p>
+                      </div>
+                        <div class="input-group" style="margin-left: 10px;">
+                         <input type="button" value="-" class="button-minus btn btn-danger" data-field="quantity" (click)="decriment('inc'+i,'nums'+i)"> 
+                          <input type="number" step="1" max="" value="0" name="quantity" class="quantity-field" [id]="'nums' +i" (input)="maxobj('nums'+i,i)">
+                          <input type="button" value="+" class="button-plus btn btn-success" data-field="quantity" id="'inc'+i" (click)="increment('inc'+i,'nums'+i,i)">
+                        </div> 
+                        <input class="btn btn-primary" type="button" value="Add to cart" (click)="addCart('nums'+i,i)"> <p [id]="'msg'+i" style="color: red;"></p>
+                      </div>
+                    </div>
+                      <br>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- #pageContent -->
+
+
+      
+<!-- Change the `data-field` of buttons and `name` of input field's for multiple plus minus buttons-->

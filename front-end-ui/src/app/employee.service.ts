@@ -11,6 +11,9 @@ import { Employee } from './model.employee';
 export class EmployeeService {
   constructor(public http: HttpClient) {}
 
+  getemp():Observable<Employee[]> {
+    return this.http.get<Employee[]>("http://localhost:9090/emp/getEmployees");
+  }
   getEmployeeByID(id: any): Observable<Employee[]> {
     return this.http.get<Employee[]>(
       'http://localhost:9090/emp/getEmployeeById/' + id
@@ -23,7 +26,7 @@ export class EmployeeService {
         responseType: 'text',
       })
       .subscribe(
-        (result) => console.log(result),
+        (result) => alert(result),
         (error) => console.log(error)
       );
   }

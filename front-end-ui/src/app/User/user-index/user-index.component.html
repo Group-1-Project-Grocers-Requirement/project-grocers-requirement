@@ -1,0 +1,52 @@
+<div id="wrapper">
+<!-- NavBar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <b class="navbar-brand">User ID: {{retrieve}}</b>
+        </div>
+        <div id="navbarNav" class="navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                </li>
+                <li><a routerLink="order-status" class="nav-link"> Order Status</a></li>
+                <li><a routerLink="edit-profile" class="nav-link"> Edit Profile</a></li>
+                <li><a routerLink="select-item" class="nav-link"> Pick Items</a></li>
+                <li class="nav-item">
+                    <a routerLink="" class="nav-link" (click) = "logout()">Log Out</a>
+                </li>
+            </ul>
+        </div>
+    </nav> 
+    <br>
+    <!-- #navBar -->
+    <!-- page content -->
+    <div class="container main" style="background-color: white;border-radius: 50px;">
+        <div class="row">
+            <div class="col" style="border: 3px solid black; margin: 10px; border-radius: 30px; background-color: blueviolet;">
+                <div class = "container-fluid">
+                    <h1 style="text-align: center;background-color: aqua;border-radius: 50px;">Products</h1>
+                    <hr>
+                    <table>
+                        <thead>
+                            <tr>
+                     <th class="card" style="width: 18rem;float: left;" *ngFor="let products of products">
+                        <img class="card-img-top" src="https://media.istockphoto.com/photos/shopping-basket-with-variety-of-grocery-products-isolated-on-white-picture-id179223663?k=20&m=179223663&s=612x612&w=0&h=3zdbYKHGxg0JjFM_ZdNxTif0FE57yXNO1RRqMR-MLqg=" alt="Card image cap">
+                        <div class="card-body">
+                          <h5 class="card-title">{{products.name}}</h5>
+                          <p class="card-text">price: ${{products.price}}</p>
+                          <a routerLink="select-item" class="btn btn-primary">Pick Item</a>
+                        </div>
+                      </th>
+                    </tr>
+                    </thead>
+                    </table>
+                    <hr>
+                    <app-funds></app-funds>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- #pageContent -->
+</div>
+

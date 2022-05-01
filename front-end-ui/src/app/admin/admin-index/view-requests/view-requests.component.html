@@ -1,0 +1,33 @@
+<div class="d">
+    <h4>Delete Request</h4>
+    <form>
+        <div class="row mb-3">
+            <label class="col-sm-1 col-form-label">ID</label>
+                <input type="text" placeholder="Enter request ID" class="form-control" #idRef/>
+            <button type="button" class="btn btn-danger" (click)="deleteById(idRef.value)">Delete Request</button>
+            <button type="reset"class="btn btn-light">Reset</button>
+        </div>
+       
+        <br>
+        {{resultMsg}}
+    </form>
+</div>
+<br>
+<div class="t"> 
+    <table class="table table-stripped text-center">
+        <tr>
+            <th>Request Id</th>
+            <th>Employee Id</th>
+            <th>Product Id</th>
+            <th>Product Name</th>
+            <th>Request</th>
+        </tr>
+        <tr *ngFor="let r of requests">
+            <td>{{r._id}}</td>
+            <td>{{r.empID}}</td>
+            <td>{{r.productID}}</td>
+            <td>{{r.productName}}</td>
+            <td>{{r.reqMsg}}</td>
+        </tr>
+    </table>
+</div>

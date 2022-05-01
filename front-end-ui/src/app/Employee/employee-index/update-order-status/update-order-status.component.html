@@ -1,0 +1,39 @@
+<div class="form-control">
+  <div id="formContent">
+    <h3 class="alert alert-primary">Update Order Status</h3>
+    <form #updateRef="ngForm" (ngSubmit)="updateOrder(updateRef.value)" class="form-group">
+      <input type="text" name="oid" class="form-control" style="width: fit-content;" placeholder="Order ID" ngModel /><br />
+      <select name="orderStatus" class="form-select" aria-label="Default select example" style="width: fit-content;" id="Status" ngModel>
+        <optgroup optgroup label="order status">
+          <option disabled selected value>-- select an option --</option>
+          <option value="Shipped">Shipped</option>
+          <option value="Delivered">Delivered</option>
+          <option value="Cancelled">Cancelled</option>
+          <option value="Pending">Pending</option>
+        </optgroup>
+      </select>
+      <br />
+      <input type="submit" value="Submit" class="btn btn-primary"/>
+      <input type="reset" value="Clear" class="btn btn-danger"/>
+    </form>
+    <a routerLink=".." class="nav-link" style="width: fit-content;">Back</a>
+    <div *ngIf="msg" class="alert alert-success text-center">
+      {{ msg }}
+    </div>
+  </div>
+</div>
+<div>
+  <table class="table table-stripped" style="background-color: white;">
+    <tr>
+      <th>OrderID</th>
+      <th>Product </th>
+      <th>Status</th>
+    </tr> 
+       <tr *ngFor="let item of orders; let i=index;">
+        <td>{{orders[i]._id}}</td> 
+         <td>{{orders[i].name}}</td> 
+         <td>{{orders[i].orderStatus}}</td>
+    </tr>
+    
+  </table>
+</div>

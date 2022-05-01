@@ -48,5 +48,4 @@ app.use('/order', Order);
 app.use('/sales', Sales);
 
 
-
 app.listen(9090, () => console.log('server is runnig on port no.9090'));

@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+        <b class="navbar-brand" style="margin-left: 2em;">User ID: {{retrieve}}</b>
+    </div>
+    <div id="navbarNav" class="navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+            </li>
+            <li><a routerLink="/user-index/order-status" class="nav-link"> Order Status</a></li>
+            <li><a routerLink="/user-index/edit-profile" class="nav-link"> Edit Profile</a></li>
+            <li><a routerLink="/user-index/select-item" class="nav-link"> Pick Items</a></li>
+            <li>
+                <a routerLink=".." class="nav-link">Back</a>
+            </li>
+        </ul>
+    </div>
+</nav> 
+<div style="background-image: linear-gradient(to right, #DA22FF 0%, #9733EE  51%, #DA22FF  100%); height: 500px; padding: 50px;">
+<h1 style="text-align: center;background-image: linear-gradient(to right, #CC95C0 0%, #DBD4B4  51%, #CC95C0  100%);border-radius: 50px;">Order Status</h1>
+                <hr>
+            <table class = "table table-dark" style="background-color: rgb(242, 104, 104);">
+            <tr>
+                <th>Order ID</th>
+                <th>Order Name</th>
+                <th>Order Status</th>
+            </tr>
+            <tr *ngFor="let order of orders">
+                    <td style="background-color: rgb(233, 242, 104); color: black; font-size: large;">{{order._id}}</td>
+                    <td style="background-color: rgb(67, 208, 233);color: black;font-size: large;">{{order.name}}</td>
+                    <td style="background-color: rgb(242, 104, 152);color: black;font-size: large;">{{order.orderStatus}}</td>
+            </tr>
+    </table>
+</div>
