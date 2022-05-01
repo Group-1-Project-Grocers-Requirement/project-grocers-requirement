@@ -9,7 +9,7 @@
                     </li>
                     <li><a routerLink="../order-status" class="nav-link"> Order Status</a></li>
                             <li><a routerLink="../edit-profile" class="nav-link"> Edit Profile</a></li>
-                            <li><a routerLink="../" class="nav-link"> funds</a></li>
+                            <li><a routerLink="../" class="nav-link">User funds</a></li>
                             <li><a routerLink="../" class="nav-link"> View Item</a></li>
                     <li class="nav-item">
                         <a routerLink="" class="nav-link" (click) = "logout()">Log Out</a>
@@ -24,7 +24,6 @@
   <p id='err' style="color:red"></p>
   <div *ngFor="let item of cartProducts; let i=index;">
     <div [id]="'item'+i">
-      <!-- <img [src]="'/assets/images/'+ 'product'+cartProducts[i].imgId+'.png'" alt="" [id]="'img'+i">-->
     <table class="table">
       <tr><th>Product</th>
       <th>Price</th>
