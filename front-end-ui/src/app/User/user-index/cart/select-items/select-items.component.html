@@ -8,7 +8,7 @@
               <ul class="navbar-nav mr-auto">
                   <li class="nav-item active">
                   </li>
-                  <li><a routerLink="../order-status" class="nav-link"> Order Status</a></li>
+                  <li><a routerLink="../order-status" class="nav-link"> Order Status</a><li>
                           <li><a routerLink="../edit-profile" class="nav-link"> Edit Profile</a></li>
                           <li><a routerLink="../" class="nav-link">User funds</a></li>
                   <li class="nav-item">
@@ -35,9 +35,9 @@
                         <p class="card-text">price: ${{products[i].price}}</p>
                       </div>
                         <div class="input-group" style="margin-left: 10px;">
-                         <input type="button" value="-" class="button-minus" data-field="quantity" (click)="decriment('inc'+i,'nums'+i)"> 
+                         <input type="button" value="-" class="button-minus btn btn-danger" data-field="quantity" (click)="decriment('inc'+i,'nums'+i)"> 
                           <input type="number" step="1" max="" value="0" name="quantity" class="quantity-field" [id]="'nums' +i" (input)="maxobj('nums'+i,i)">
-                          <input type="button" value="+" class="button-plus" data-field="quantity" id="'inc'+i" (click)="increment('inc'+i,'nums'+i,i)">
+                          <input type="button" value="+" class="button-plus btn btn-success" data-field="quantity" id="'inc'+i" (click)="increment('inc'+i,'nums'+i,i)">
                         </div> 
                         <input class="btn btn-primary" type="button" value="Add to cart" (click)="addCart('nums'+i,i)"> <p [id]="'msg'+i" style="color: red;"></p>
                       </div>

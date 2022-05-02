@@ -78,7 +78,7 @@ let lockUser = (req, res) => {
   let pid = req.body.id;
   //console.log(pid)
   UserModel.updateOne(
-    { _id: new ObjectId(pid) },
+    { _id: pid },
     { $set: { locked: true } },
 
     (err, result) => {
@@ -170,7 +170,7 @@ let unlockUser = (req, res) => {
   let uid = req.body.uid;
   //let objUid = new ObjectId(uid);
   console.log('uid: ' + uid);
-  UserModel.updateOne({ _id: new ObjectId(uid) }, { $set: { locked: false } })
+  UserModel.updateOne({ _id: uid }, { $set: { locked: false } })
     .then((obj) => {
       console.log(obj);
     })

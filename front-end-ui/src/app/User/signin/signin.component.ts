@@ -29,7 +29,6 @@ export class SigninComponent implements OnInit {
   checkUser(userRef: any): void {
     const id = userRef.id;
     const pass = userRef.pass;
-    // console.log(id, typeof(pass));
     this.user.retrieveUserById(id).subscribe(result => {
       if (result[0].locked === true) {
         alert('Your account is locked, please raise a ticket');
@@ -48,7 +47,6 @@ export class SigninComponent implements OnInit {
         console.log(this.numberlogin);
         // add authguard
         if (this.numberlogin === 3) {
-          // tslint:disable-next-line:no-shadowed-variable
           this.user.lockUser(userRef).subscribe((result: string) => {
             this.showButton = true;
             alert('Your account is locked, please raise a ticket');
