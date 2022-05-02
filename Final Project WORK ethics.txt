@@ -1,0 +1,4 @@
+Bhalchandra - Backend / frontend routing auth gaurd services components ui etc 
+Azad - backend(admin) front-end models admin user services 
+Shubham - backend(Employees-request-tickets) front end models employe services 
+all Features are completed

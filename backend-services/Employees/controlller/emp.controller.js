@@ -70,7 +70,7 @@ let editEmpPro = (req, res) => {
     }
   )
     .then((obj) => {
-      console.log(obj);
+      console.log(obj._id);
     })
     .catch((err) => {
       console.log(err);
