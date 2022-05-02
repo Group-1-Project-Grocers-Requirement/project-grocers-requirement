@@ -26,5 +26,9 @@ Azad : Working with frontend
 1. shubham : admin , employee , user sign-in and services with models 
 2. Azad Frontend admin-index, and employee-index 
 3. bhalchandra Frontend and backend
-
+#Day 7:
+1.Bhalchandra : checking everything working of the project from backend to frontend polishing the code.
+2.shubham : working on the employee 
+3.Azad : checking user cart 
+Finally completing the project and pushing . 
 
