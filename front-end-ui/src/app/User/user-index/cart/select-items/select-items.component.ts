@@ -12,17 +12,16 @@ import { Router } from '@angular/router';
 export class SelectItemsComponent implements OnInit {
   [x: string]: any;
   products: Array<Product> = [];
-  cartNum = 0;
+  cartNum = 0; // get from cart later
   UserId = sessionStorage.getItem('curUserId');
   currentFunds=0;
-  constructor(public getItemsService: UsersService , public router:Router) { }
+  constructor(public getItemsService: UsersService,public router:Router) { }
 
   ngOnInit(): void {
     this.getItemsService.selectAllitems().subscribe(result => {
       this.products = result;
     });
     this.getItemsService.viewCartitems(this.UserId).subscribe(result => {
-      // tslint:disable-next-line:prefer-for-of
       for (let i = 0; i < result.length; i++) {
         this.cartNum = this.cartNum + result[i].quantity;
       }
@@ -30,7 +29,9 @@ export class SelectItemsComponent implements OnInit {
     this.getItemsService.retrieveUserById(this.UserId).subscribe(result => {
       this.currentFunds = result[0].funds;
     })
+
   }
+
   increment(id: any, val: any, i: any): void {
     const num = (document.getElementById(val) as HTMLInputElement);
     let current = parseInt(num.value);
@@ -38,10 +39,12 @@ export class SelectItemsComponent implements OnInit {
     if (current > this.products[i].quantity) {
 
     }
+
     else {
       num.value = current.toString();
     }
   }
+
   decriment(id: any, val: any): void {
     const dec = document.getElementById(id);
     const num = (document.getElementById(val) as HTMLInputElement);
@@ -74,6 +77,5 @@ export class SelectItemsComponent implements OnInit {
     sessionStorage.removeItem('token');
     sessionStorage.removeItem('curUserId');
     this.router.navigate(['shopper']);
-    
   }
 }

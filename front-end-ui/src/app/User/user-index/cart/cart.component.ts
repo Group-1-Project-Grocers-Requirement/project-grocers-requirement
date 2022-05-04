@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -19,6 +19,6 @@ export class CartComponent implements OnInit {
     this.router.navigate(['shopper']);
   }
   complete(): void {
-    this.router.navigate(['user-index']);
+    this.router.navigate(['user-index/order-status']);
   }
 }

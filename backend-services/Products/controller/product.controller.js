@@ -22,7 +22,8 @@ let storeProdectDetails = (req,res)=>{
     let product = new ProductModel({
         name:req.body.name,
         price:req.body.price,
-        quantity:req.body.quantity
+        quantity:req.body.quantity,
+        img:req.body.img
     });
     console.log(product)
     product.save((err,result)=>{

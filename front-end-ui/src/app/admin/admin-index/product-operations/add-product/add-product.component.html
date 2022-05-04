@@ -34,6 +34,12 @@
                         <input type="text" class="form-control" placeholder="quantity enter here" name="quantity" required ngModel/>
                     </div>
                 </div>
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label">Img Url</label>
+                    <div class="col-sm-7">
+                        <input type="text" class="form-control" placeholder="Enter Url Here" name="img" required ngModel/>
+                    </div>
+                </div>
                     
                 <button type="submit" class="btn btn-warning m-2" onClick="window.location.reload();" >Add Product</button>
                 <button type="reset" class="btn btn-light">Reset</button>
@@ -48,12 +54,14 @@
                         <th>Product Name</th>
                         <th>Price</th>
                         <th>Quantity</th>
+                        <th>Img URL</th>
                     </tr>
                     <tr *ngFor="let p of products">
                         <td  style="background-color: rgb(221, 47, 47);">{{p._id}}</td>
                         <td style="background-color: rgb(116, 190, 36);">{{p.name}}</td>
                         <td style="background-color: rgb(39, 189, 219);">{{p.price}}</td>
                         <td style="background-color: rgb(160, 226, 26);">{{p.quantity}}</td>
+                        <td style="background-color: rgb(160, 226, 26);"><img src="{{p.img}}" alt="{{p.name}}" style="width: 200px;height: 200px; border: none;"></td>
                     </tr>
                 </table>
                 <br>

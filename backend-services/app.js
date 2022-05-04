@@ -32,8 +32,7 @@ var Order = require('./Orders/router/orders.router.js');
 var Sales = require("./Sales/router/sales.router.js");
 var Admin = require('./Admin/router/admin.router.js');
 
-// http://localhost:9090/product/viewProducts   Get App Product Details
-// http://localhost:9090/product/selectProduct/102   Get App Product Details by Id
+
 // http://localhost:9090/product/storeProductDetails    rest client or post man
 // http://localhost:9090/product/deleteProductById/101 Delete the product using ID 
 // http://localhost:9090/product/updateProductById  update
