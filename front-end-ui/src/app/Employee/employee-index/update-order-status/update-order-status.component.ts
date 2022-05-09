@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Order } from 'src/app/model.order';
 import { OrderService } from 'src/app/order.service';
-import { UsersService } from 'src/app/users.service';
 
 
 @Component({
